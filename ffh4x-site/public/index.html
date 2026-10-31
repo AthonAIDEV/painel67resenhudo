@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Painel ffh4x by mu - Free Fire Aimbot & ESP Official Download">
+    <meta name="theme-color" content="#00ff88">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ffh4x Panel">
+    <title>Painel ffh4x by mu | Free Fire Aimbot & ESP</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+    <div class="scanline-overlay" aria-hidden="true"></div>
+
+    <header class="header" role="banner">
+        <nav class="nav container" aria-label="Navegação principal">
+            <a href="#" class="logo" aria-label="ffh4x Panel - Início">
+                <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <rect width="48" height="48" rx="12" fill="currentColor"/>
+                    <path d="M12 16h24M12 24h18M12 32h12" stroke="#0a0f0d" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">ffh4x</span>
+            </a>
+            <div class="nav-actions">
+                <span class="version-badge" id="versionBadge">v2.4.1</span>
+                <a href="#download" class="btn btn-primary nav-cta" aria-label="Baixar painel">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                    Baixar
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" role="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge" aria-label="Status do painel">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        <span>Online & Atualizado</span>
+                    </div>
+                    <h1 id="hero-title" class="hero-title">
+                        Painel <span class="highlight">ffh4x</span> by mu
+                    </h1>
+                    <p class="hero-subtitle">
+                        Aimbot preciso + ESP completo para Free Fire. Painel flutuante, anti-ban avançado, 
+                        configuração visual. Feito para mobile, otimizado para performance.
+                    </p>
+                    <div class="hero-stats" role="list" aria-label="Estatísticas do painel">
+                        <div class="stat" role="listitem">
+                            <strong class="stat-value" data-count="0" data-target="99">99%</strong>
+                            <span class="stat-label">Anti-ban Rate</span>
+                        </div>
+                        <div class="stat" role="listitem">
+                            <strong class="stat-value" data-count="0" data-target="60">60+</strong>
+                            <span class="stat-label">FPS Estável</span>
+                        </div>
+                        <div class="stat" role="listitem">
+                            <strong class="stat-value" data-count="0" data-target="12">12k+</strong>
+                            <span class="stat-label">Downloads</span>
+                        </div>
+                        <div class="stat" role="listitem">
+                            <strong class="stat-value" data-count="0" data-target="2">2.4</strong>
+                            <span class="stat-label">Versão Atual</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn btn-primary btn-lg" id="downloadBtn" aria-label="Baixar Painel ffh4x v2.4.1">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            <span>Baixar Painel ffh4x v2.4.1</span>
+                            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#features" class="btn btn-secondary btn-lg" aria-label="Ver funcionalidades">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <path d="M8 21h8M12 17v4"/>
+                            </svg>
+                            <span>Ver Funcionalidades</span>
+                        </a>
+                    </div>
+                    <div class="hero-trust" aria-label="Compatibilidade">
+                        <span class="trust-label">Compatível com:</span>
+                        <div class="trust-badges">
+                            <span class="badge-game" data-game="freefire">Free Fire</span>
+                            <span class="badge-game" data-game="freefiremax">Free Fire MAX</span>
+                            <span class="badge-platform" data-platform="android">Android 10+</span>
+                            <span class="badge-platform" data-platform="root">Root / Virtual</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-notch" aria-hidden="true"></div>
+                            <div class="phone-screen" id="phoneScreen">
+                                <div class="panel-preview">
+                                    <div class="panel-header">
+                                        <div class="panel-title">Painel ffh4x by mu</div>
+                                        <div class="panel-status online" aria-label="Painel ativo">
+                                            <span class="status-dot"></span> Ativo
+                                        </div>
+                                    </div>
+                                    <div class="panel-tabs" role="tablist" aria-label="Abas do painel">
+                                        <button role="tab" aria-selected="true" aria-controls="aimbot-panel" class="tab-btn active">Aimbot</button>
+                                        <button role="tab" aria-selected="false" aria-controls="esp-panel" class="tab-btn">ESP</button>
+                                        <button role="tab" aria-selected="false" aria-controls="config-panel" class="tab-btn">Config</button>
+                                    </div>
+                                    <div class="panel-content" id="aimbot-panel" role="tabpanel">
+                                        <div class="setting-row">
+                                            <label class="setting-label">Aimbot</label>
+                                            <label class="toggle" aria-label="Ativar aimbot">
+                                                <input type="checkbox" checked aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">FOV</label>
+                                            <div class="slider-wrap">
+                                                <input type="range" class="slider" min="10" max="360" value="90" aria-label="Campo de visão do aimbot">
+                                                <span class="slider-value">90°</span>
+                                            </div>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Smooth</label>
+                                            <div class="slider-wrap">
+                                                <input type="range" class="slider" min="1" max="50" value="12" aria-label="Suavização do aimbot">
+                                                <span class="slider-value">12</span>
+                                            </div>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Bone Target</label>
+                                            <select class="select" aria-label="Osso alvo do aimbot">
+                                                <option value="head">Head</option>
+                                                <option value="neck" selected>Neck</option>
+                                                <option value="chest">Chest</option>
+                                                <option value="pelvis">Pelvis</option>
+                                            </select>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Prediction</label>
+                                            <label class="toggle" aria-label="Ativar predição de movimento">
+                                                <input type="checkbox" checked aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content" id="esp-panel" role="tabpanel" hidden>
+                                        <div class="setting-row">
+                                            <label class="setting-label">ESP Box</label>
+                                            <label class="toggle" aria-label="Ativar ESP Box">
+                                                <input type="checkbox" checked aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">ESP Line</label>
+                                            <label class="toggle" aria-label="Ativar ESP Line">
+                                                <input type="checkbox" checked aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">ESP Distance</label>
+                                            <label class="toggle" aria-label="Ativar distância no ESP">
+                                                <input type="checkbox" checked aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">ESP Health</label>
+                                            <label class="toggle" aria-label="Ativar barra de vida no ESP">
+                                                <input type="checkbox" checked aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">ESP Name</label>
+                                            <label class="toggle" aria-label="Ativar nome no ESP">
+                                                <input type="checkbox" aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Max Distance</label>
+                                            <div class="slider-wrap">
+                                                <input type="range" class="slider" min="50" max="500" value="300" aria-label="Distância máxima do ESP">
+                                                <span class="slider-value">300m</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-content" id="config-panel" role="tabpanel" hidden>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Anti-Ban</label>
+                                            <label class="toggle" aria-label="Ativar anti-ban">
+                                                <input type="checkbox" checked aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Stream Proof</label>
+                                            <label class="toggle" aria-label="Ativar stream proof">
+                                                <input type="checkbox" checked aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Vibration Feedback</label>
+                                            <label class="toggle" aria-label="Ativar feedback vibratório">
+                                                <input type="checkbox" aria-hidden="true">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Panel Opacity</label>
+                                            <div class="slider-wrap">
+                                                <input type="range" class="slider" min="30" max="100" value="95" aria-label="Opacidade do painel">
+                                                <span class="slider-value">95%</span>
+                                            </div>
+                                        </div>
+                                        <div class="setting-row">
+                                            <label class="setting-label">Save Config</label>
+                                            <button class="btn btn-ghost btn-sm" aria-label="Salvar configuração atual">Salvar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone-home" aria-hidden="true"></div>
+                        </div>
+                        <div class="phone-glow" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features" aria-labelledby="features-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="features-title" class="section-title">Funcionalidades</h2>
+                    <p class="section-subtitle">Tudo que você precisa para dominar no Free Fire</p>
+                </header>
+                <div class="features-grid">
+                    <article class="feature-card" data-feature="aimbot">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Aimbot Precision</h3>
+                        <p class="feature-desc">Lock suave com predição de movimento, FOV ajustável, smooth configurável e seleção de osso (Head/Neck/Chest). Funciona em todas as armas.</p>
+                        <ul class="feature-specs" aria-label="Especificações do aimbot">
+                            <li>FOV: 10° - 360°</li>
+                            <li>Smooth: 1 - 50</li>
+                            <li>Predição balística</li>
+                            <li>Verificação de visibilidade</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card" data-feature="esp">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M12 8v8M8 12h8"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">ESP Completo</h3>
+                        <p class="feature-desc">Box 2D/3D, linhas, distância, barra de vida, nomes, skeleton. Cores personalizáveis por time/inimigo. Render otimizado via overlay.</p>
+                        <ul class="feature-specs" aria-label="Especificações do ESP">
+                            <li>Box 2D & 3D</li>
+                            <li>Health bar & text</li>
+                            <li>Distância em metros</li>
+                            <li>Skeleton ESP</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card" data-feature="antiban">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Anti-Ban Avançado</h3>
+                        <p class="feature-desc">Memory protection, hook detection bypass, integrity checks spoofing, randomized signatures, stream proof overlay. 99% taxa de sucesso.</p>
+                        <ul class="feature-specs" aria-label="Especificações do anti-ban">
+                            <li>Memory guard</li>
+                            <li>Hook scanner bypass</li>
+                            <li>Signature randomization</li>
+                            <li>Stream proof</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card" data-feature="panel">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <path d="M8 21h8M12 17v4"/>
+                                <path d="M6 8h12M6 12h12M6 16h8"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Painel Flutuante</h3>
+                        <p class="feature-desc">UI moderna estilo iOS/Android, arrastável, redimensionável, abas organizadas, salvamento automático de config, tema escuro/claro.</p>
+                        <ul class="feature-specs" aria-label="Especificações do painel">
+                            <li>Arrastável & redimensionável</li>
+                            <li>3 abas: Aimbot/ESP/Config</li>
+                            <li>Auto-save config</li>
+                            <li>Tema adaptativo</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card" data-feature="performance">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Performance 60+ FPS</h3>
+                        <p class="feature-desc">Código nativo C++ via JNI, thread dedicada para aimbot, render ESP em overlay separado, zero garbage collection no loop principal.</p>
+                        <ul class="feature-specs" aria-label="Especificações de performance">
+                            <li>Native C++ JNI</li>
+                            <li>Thread dedicada</li>
+                            <li>Overlay separado</li>
+                            <li>Zero GC no loop</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card" data-feature="updates">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 4v6h-6"/>
+                                <path d="M1 20v-6h6"/>
+                                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Auto-Update</h3>
+                        <p class="feature-desc">Verificação automática de updates no GitHub/Cloudflare, download incremental, changelog integrado, rollback automático se der erro.</p>
+                        <ul class="feature-specs" aria-label="Especificações de update">
+                            <li>Check automático</li>
+                            <li>Download incremental</li>
+                            <li>Changelog no app</li>
+                            <li>Rollback seguro</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download" aria-labelledby="download-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="download-title" class="section-title">Download</h2>
+                    <p class="section-subtitle">Escolha sua versão e instale em segundos</p>
+                </header>
+                <div class="download-cards">
+                    <article class="download-card featured" data-version="stable">
+                        <div class="card-tag">Recomendado</div>
+                        <div class="card-header">
+                            <div class="card-version">v2.4.1 <span class="version-type">Stable</span></div>
+                            <div class="card-date">Atualizado em 28/10/2026</div>
+                        </div>
+                        <h3 class="card-title">Painel ffh4x by mu</h3>
+                        <p class="card-desc">Versão estável com todas as funcionalidades. Anti-ban atualizado para OB46+. Compatível Free Fire & Free Fire MAX.</p>
+                        <ul class="card-features" aria-label="Incluído nesta versão">
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Aimbot + ESP completo</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Painel flutuante ffh4x by mu</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Anti-ban + Stream proof</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Auto-update habilitado</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Suporte Root & Virtual Space</li>
+                        </ul>
+                        <div class="card-size">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            <span>APK + Libs: ~42 MB</span>
+                        </div>
+                        <button class="btn btn-primary btn-block btn-lg download-trigger" data-download="stable" aria-label="Baixar versão estável v2.4.1">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            <span>Baixar v2.4.1 Stable</span>
+                        </button>
+                        <div class="card-hashes" aria-label="Hashes de verificação">
+                            <details>
+                                <summary>Verificar integridade (SHA-256)</summary>
+                                <code class="hash-value">a7f3c2e9b1d4f8e5c6a9b2d3e7f1a4c8...</code>
+                                <button class="btn-copy" aria-label="Copiar hash">Copiar</button>
+                            </details>
+                        </div>
+                    </article>
+                    <article class="download-card" data-version="beta">
+                        <div class="card-header">
+                            <div class="card-version">v2.5.0-beta <span class="version-type beta">Beta</span></div>
+                            <div class="card-date">Disponível em breve</div>
+                        </div>
+                        <h3 class="card-title">Próxima Versão (Beta)</h3>
+                        <p class="card-desc">Novos features experimentais: Silent Aim, Triggerbot, Magic Bullet, ESP Vehicle/Loot. Apenas para testadores.</p>
+                        <ul class="card-features" aria-label="Features beta">
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Silent Aim (experimental)</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Triggerbot</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Magic Bullet</li>
+                            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Vehicle & Loot ESP</li>
+                        </ul>
+                        <div class="card-size">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            <span>~48 MB</span>
+                        </div>
+                        <button class="btn btn-secondary btn-block btn-lg" disabled aria-label="Versão beta não disponível">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span>Beta Fechado</span>
+                        </button>
+                        <p class="card-note">Entre no Discord para acesso antecipado</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="install-guide" aria-labelledby="install-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="install-title" class="section-title">Como Instalar</h2>
+                    <p class="section-subtitle">Processo simples, 3 passos, sem complicação</p>
+                </header>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Baixe o APK</h3>
+                        <p class="step-desc">Toque no botão de download acima. O arquivo <code>ffh4x-panel-v2.4.1.apk</code> será salvo no seu Downloads.</p>
+                        <div class="step-visual" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="8" y="12" width="48" height="40" rx="4"/>
+                                <path d="M24 20h16M24 28h16M24 36h10"/>
+                                <path d="M32 12v-4M32 52v4"/>
+                            </svg>
+                        </div>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Instale via Gerenciador</h3>
+                        <p class="step-desc">Abra o APK pelo gerenciador de arquivos. Se pedir, ative <strong>"Instalar apps desconhecidos"</strong> para seu navegador/gerenciador.</p>
+                        <div class="step-visual" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="8" y="12" width="48" height="40" rx="4"/>
+                                <circle cx="32" cy="28" r="10"/>
+                                <path d="M32 22v12M26 28h12"/>
+                            </svg>
+                        </div>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Ative Permissões</h3>
+                        <p class="step-desc">Abra o app, conceda <strong>"Sobrepor outros apps"</strong> e <strong>"Acesso a arquivos"</strong>. Para Root: conceda SuperSU/Magisk. Para Virtual: use VMOS Pro / F1 VM.</p>
+                        <div class="step-visual" aria-hidden="true">
+                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="8" y="12" width="48" height="40" rx="4"/>
+                                <path d="M18 24h28M18 32h28M18 40h18"/>
+                                <rect x="20" y="26" width="24" height="12" rx="2"/>
+                            </svg>
+                        </div>
+                    </article>
+                </div>
+                <div class="install-note">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                    <div>
+                        <strong>Nota:</strong> Para melhor desempenho use com <strong>Root (Magisk/KernelSU)</strong> ou <strong>Virtual Space (VMOS Pro, F1 VM, X8 Sandbox)</strong>. Sem root funciona mas aimbot pode ter delay.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="changelog" aria-labelledby="changelog-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="changelog-title" class="section-title">Changelog</h2>
+                    <p class="section-subtitle">O que há de novo na v2.4.1</p>
+                </header>
+                <div class="changelog-list">
+                    <article class="changelog-item" data-version="2.4.1">
+                        <header class="changelog-header">
+                            <span class="changelog-version">v2.4.1</span>
+                            <time class="changelog-date" datetime="2026-10-28">28 Out 2026</time>
+                        </header>
+                        <ul class="changelog-changes">
+                            <li class="change fix">Corrigido crash no ESP ao trocar de arma</li>
+                            <li class="change fix">Aimbot prediction ajustado para nova física OB46</li>
+                            <li class="change feat">Adicionado suporte a Free Fire MAX OB46</li>
+                            <li class="change feat">Painel: nova opacidade ajustável (30-100%)</li>
+                            <li class="change perf">Otimizado uso de CPU no overlay ESP (-15%)</li>
+                            <li class="change fix">Corrigido memory leak no auto-update</li>
+                            <li class="change feat">Adicionado vibração feedback no lock (opcional)</li>
+                        </ul>
+                    </article>
+                    <article class="changelog-item" data-version="2.4.0">
+                        <header class="changelog-header">
+                            <span class="changelog-version">v2.4.0</span>
+                            <time class="changelog-date" datetime="2026-10-15">15 Out 2026</time>
+                        </header>
+                        <ul class="changelog-changes">
+                            <li class="change feat">Reescrita completa do aimbot em C++ nativo</li>
+                            <li class="change feat">Novo painel flutuante ffh4x by mu</li>
+                            <li class="change feat">ESP Skeleton + Health Bar text</li>
+                            <li class="change feat">Anti-ban v2 com signature randomization</li>
+                            <li class="change perf">60+ FPS garantido em dispositivos médios</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="faq-title" class="section-title">Perguntas Frequentes</h2>
+                </header>
+                <div class="faq-grid">
+                    <details class="faq-item">
+                        <summary>Precisa de Root para funcionar?</summary>
+                        <p>Não obrigatório. Funciona em Virtual Space (VMOS Pro, F1 VM, X8 Sandbox) sem root. Com Root (Magisk/KernelSU) o aimbot tem latência menor e anti-ban mais forte.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Funciona no Free Fire MAX?</summary>
+                        <p>Sim. Compatível com Free Fire (com.dts.freefireth) e Free Fire MAX (com.dts.freefiremax). O painel detecta automaticamente qual versão está rodando.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Como atualizar o painel?</summary>
+                        <p>O painel verifica updates automaticamente ao abrir. Também pode baixar a nova versão aqui no site e instalar por cima (mantém suas configs).</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>O painel aparece na gravação de tela?</summary>
+                        <p>Não. O modo <strong>Stream Proof</strong> (ativado por padrão) esconde o overlay e o painel flutuante de gravações, screenshots e apps de streaming.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Risco de banimento?</summary>
+                        <p>Taxa de anti-ban de 99% na v2.4.1. Use configurações conservadoras (FOV baixo, smooth alto), não abuse em ranked, evite reports massivos. Jogue smart.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Como configurar o aimbot ideal?</summary>
+                        <p>Comece com: FOV 60-80°, Smooth 10-15, Bone: Neck, Prediction: ON. Ajuste no treino. SMG/AR: FOV menor. Sniper: FOV maior, smooth menor.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-card">
+                    <h2 id="cta-title" class="cta-title">Pronto para dominar?</h2>
+                    <p class="cta-desc">Baixe agora o Painel ffh4x by mu e entre no jogo com vantagem real. Atualizações constantes, suporte ativo, comunidade no Discord.</p>
+                    <div class="cta-actions">
+                        <a href="#download" class="btn btn-primary btn-lg" aria-label="Baixar painel agora">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            Baixar v2.4.1 Agora
+                        </a>
+                        <a href="https://discord.gg/ffh4x" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" aria-label="Entrar no Discord ffh4x">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                                <path d="M20 13.5c0-2.5-1.5-4.5-3.5-5.5C14.5 6 13 7.5 13 9.5c0 1.5.8 2.5 2 3l-4 4 2 2 4-4c1.5-.5 2.5-1.5 2.5-3z"/>
+                                <path d="M19 13.5c0 2.5-1.5 4.5-3.5 5.5S10 21 10 19c0-1.5-.8-2.5-2-3l4-4-2-2-4 4c-1.5.5-2.5 1.5-2.5 3z"/>
+                            </svg>
+                            Discord Community
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo" aria-label="ffh4x Panel - Início">
+                        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                            <rect width="48" height="48" rx="12" fill="currentColor"/>
+                            <path d="M12 16h24M12 24h18M12 32h12" stroke="#0a0f0d" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="logo-text">ffh4x</span>
+                    </a>
+                    <p class="footer-tagline">Painel ffh4x by mu — Aimbot & ESP para Free Fire</p>
+                    <div class="social-links" aria-label="Redes sociais">
+                        <a href="https://discord.gg/ffh4x" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 13.5c0-2.5-1.5-4.5-3.5-5.5C14.5 6 13 7.5 13 9.5c0 1.5.8 2.5 2 3l-4 4 2 2 4-4c1.5-.5 2.5-1.5 2.5-3zM19 13.5c0 2.5-1.5 4.5-3.5 5.5S10 21 10 19c0-1.5-.8-2.5-2-3l4-4-2-2-4 4c-1.5.5-2.5 1.5-2.5 3z"/></svg>
+                        </a>
+                        <a href="https://github.com/ffh4x" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://t.me/ffh4x" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.984 6.189a.997.997 0 0 0-.625-1.374 56.177 56.177 0 0 0-24.586-4.516.997.997 0 0 0-1.047 1.17 67.52 67.52 0 0 0 2.416 22.651.997.997 0 0 0 .292.817l5.686 3.25a.997.997 0 0 0 1.269-.43c2.726-2.433 5.22-4.581 7.48-6.542a.997.997 0 0 0 .111-1.457l-5.056-6.445a.997.997 0 0 0-1.174-.075c-12.92 3.283-24.584 9.174-24.584 22.15v.08c0 1.1.9.2 1.236 1.373a61.246 61.246 0 0 0 31.927 5.201.997.997 0 0 0 1.214-.464 75.778 75.778 0 0 0 6.216-12.766l.277-.443c2.626-4.199 3.02-9.376 1.074-12.646a.987.987 0 0 0-.462-.936l-3.413-.743c-2.854-.621-5.105-1.981-6.181-4.385a.99.99 0 0 0-1.313.141L2.795 18.756a1.004 1.004 0 0 0-.085 1.355l6.553 6.015c.936.858 2.19.86 3.044.008 4.488-4.474 8.998-8.901 12.594-14.28a.996.996 0 0 0 .174-1.17l-.433-.718c-.223-.367-.568-.724-.789-.845-.182-.1-.362-.19-.466-.158.073.01.147.024.22.041 3.209.78 6.068 2.24 8.254 4.632a.997.997 0 0 0 1.084.502l2.184-1.135c.78-.406 1.3-.984 1.421-1.843.17-1.229-.442-2.274-1.125-2.524-.574-.21-1.09-.12-1.415.117-1.42.238-2.824.59-4.053 1.175-.673.32-1.09.818-.918 1.384.273.918.85 1.587 1.204 1.754.411.194 1.154-.068 1.388-.681 1.475-3.825 2.866-7.305 5.576-10.175a1.005 1.005 0 0 1 1.244-1.254l15.704-5.685c.68-.246 1.16-.883 1.04-1.608z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <nav class="footer-nav" aria-label="Links rápidos">
+                    <div class="footer-col">
+                        <h4>Download</h4>
+                        <ul>
+                            <li><a href="#download">Versão Stable</a></li>
+                            <li><a href="#download">Versão Beta</a></li>
+                            <li><a href="#changelog">Changelog</a></li>
+                            <li><a href="#install">Como Instalar</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#features">Aimbot</a></li>
+                            <li><a href="#features">ESP</a></li>
+                            <li><a href="#features">Anti-Ban</a></li>
+                            <li><a href="#features">Painel UI</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="https://discord.gg/ffh4x" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                            <li><a href="https://t.me/ffh4x" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="mailto:suporte@ffh4x.dev">Email</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="/privacy">Privacidade</a></li>
+                            <li><a href="/terms">Termos de Uso</a></li>
+                            <li><a href="/disclaimer">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 ffh4x Panel by mu. Todos os direitos reservados.</p>
+                <p class="disclaimer">Este software é apenas para fins educacionais e de teste. Use por sua conta e risco. Não nos responsabilizamos por banimentos ou danos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite" aria-label="Notificações"></div>
+
+    <script type="module" src="/assets/app.js"></script>
+</body>
+</html>

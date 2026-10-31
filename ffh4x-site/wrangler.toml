@@ -1,0 +1,26 @@
+name = "ffh4x-panel-worker"
+main = "worker.js"
+compatibility_date = "2024-10-31"
+compatibility_flags = ["nodejs_compat"]
+
+# KV Namespace para assets estáticos
+[[kv_namespaces]]
+binding = "ASSETS"
+id = "ffh4x-assets-prod"
+preview_id = "ffh4x-assets-preview"
+
+# Variáveis de ambiente
+[vars]
+SITE_URL = "https://ffh4x-panel-worker.<SEU_SUBDOMAIN>.workers.dev"
+
+# Limites
+[limits]
+cpu_ms = 50
+
+# Build: usa wrangler para subir assets para KV
+[build]
+command = "echo 'Static site - assets uploaded via wrangler deploy'"
+cwd = "."
+
+# Assets directory (para wrangler pages, não worker sites)
+# Para Worker Sites tradicional, assets vão pro KV via deploy

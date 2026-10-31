@@ -1,0 +1,21 @@
+# Cloudflare Pages SPA Fallback
+/* /index.html 200
+
+# Legacy/short URLs
+/baixar /#download 301
+/download /#download 301
+/features /#features 301
+/install /#install 301
+/changelog /#changelog 301
+/faq /#faq 301
+
+# Version shortcuts
+/v2.4.1 /#download 301
+/stable /#download 301
+/latest /#download 301
+/beta /#download 301
+
+# Social redirects
+/discord https://discord.gg/ffh4x 302
+/telegram https://t.me/ffh4x 302
+/github https://github.com/ffh4x 302
